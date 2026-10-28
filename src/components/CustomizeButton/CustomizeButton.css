@@ -1,0 +1,34 @@
+/* Floating customize button */
+.customize-btn {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  z-index: 9999;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  color: var(--black);
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-gold), 0 10px 30px rgba(0, 0, 0, 0.4);
+  transition: var(--transition);
+}
+
+.customize-btn:hover {
+  transform: rotate(90deg) scale(1.08);
+}
+
+@media (max-width: 600px) {
+  .customize-btn {
+    bottom: 20px;
+    left: 20px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+  }
+}

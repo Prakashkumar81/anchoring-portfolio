@@ -1,0 +1,32 @@
+.backtop {
+  position: fixed;
+  bottom: 168px;
+  right: 34px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--gold-gradient);
+  color: var(--black);
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: var(--shadow-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.backtop:hover {
+  transform: translateY(-4px);
+}
+
+@media (max-width: 600px) {
+  .backtop {
+    bottom: 140px;
+    right: 22px;
+    width: 44px;
+    height: 44px;
+  }
+}

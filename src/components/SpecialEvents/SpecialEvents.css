@@ -1,0 +1,228 @@
+/* ============================================================
+   SPECIAL EVENTS / SIGNATURE EVENTS SECTION
+   ============================================================ */
+
+.special-events {
+  background: var(--black);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating golden particles inside the section */
+.special-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.special-particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(240, 217, 140, 0.9), rgba(212, 175, 55, 0.3));
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+  animation: floatUp linear infinite;
+  opacity: 0;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-110vh) translateX(30px);
+    opacity: 0;
+  }
+}
+
+/* Gold divider above & below */
+.special-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(212, 175, 55, 0.6) 50%,
+    transparent 100%
+  );
+  opacity: 0.5;
+}
+
+/* Grid: 3 columns on desktop */
+.special-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* Card with 3D tilt + gold gradient border */
+.special-card {
+  position: relative;
+  border-radius: var(--radius);
+  padding: 2px; /* for gradient border */
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.5),
+    rgba(255, 255, 255, 0.08),
+    rgba(212, 175, 55, 0.5)
+  );
+  transform: perspective(900px) rotateX(var(--tiltX, 0deg))
+    rotateY(var(--tiltY, 0deg));
+  transform-style: preserve-3d;
+  transition: transform 0.25s ease, box-shadow 0.4s ease;
+  will-change: transform;
+}
+
+.special-card:hover {
+  transform: perspective(900px) rotateX(var(--tiltX, 0deg))
+    rotateY(var(--tiltY, 0deg)) scale(1.03);
+  box-shadow: var(--shadow-gold), 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+/* Glassmorphism inner */
+.special-inner {
+  position: relative;
+  height: 100%;
+  background: rgba(18, 18, 18, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 40px 28px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Spotlight on hover */
+.special-spotlight {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    300px circle at var(--spotX, 50%) var(--spotY, 50%),
+    rgba(212, 175, 55, 0.18),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none;
+}
+
+.special-card:hover .special-spotlight {
+  opacity: 1;
+}
+
+/* Animated shine sweep */
+.special-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    100deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.12) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  transition: left 0.7s ease;
+  pointer-events: none;
+}
+
+.special-card:hover .special-shine {
+  left: 150%;
+}
+
+/* Icon */
+.special-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 20px;
+  background: var(--gold-gradient);
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 22px;
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.5s ease;
+}
+
+.special-card:hover .special-icon {
+  transform: translateZ(30px) rotate(-8deg) scale(1.12);
+}
+
+/* Title & desc */
+.special-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  margin-bottom: 12px;
+  transform: translateZ(20px);
+}
+
+.special-desc {
+  color: var(--white-muted);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex: 1;
+}
+
+/* Learn More button */
+.special-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold);
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  padding: 10px 22px;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  border-radius: 50px;
+  transition: var(--transition);
+  transform: translateZ(20px);
+}
+
+.special-btn-arrow {
+  transition: transform 0.3s ease;
+}
+
+.special-btn:hover {
+  background: var(--gold-gradient);
+  color: var(--black);
+  box-shadow: var(--shadow-gold);
+}
+
+.special-btn:hover .special-btn-arrow {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .special-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .special-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .special-inner {
+    padding: 32px 22px;
+  }
+}

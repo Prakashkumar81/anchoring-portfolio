@@ -1,0 +1,144 @@
+.floating-bubbles-stack {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 9998;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.contact-bubble {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-bubble:hover {
+  transform: scale(1.1) translateY(-2px);
+  color: #ffffff;
+}
+
+.contact-bubble-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  z-index: 2;
+}
+
+/* WhatsApp bubble specific styles */
+.whatsapp-bubble {
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-bubble:hover {
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6), 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Gmail bubble specific styles */
+.gmail-bubble {
+  background: linear-gradient(135deg, #EA4335 0%, #C5221F 100%);
+  box-shadow: 0 8px 24px rgba(234, 67, 53, 0.4), 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.gmail-bubble .contact-bubble-icon {
+  font-size: 1.55rem;
+}
+
+.gmail-bubble:hover {
+  box-shadow: 0 12px 30px rgba(234, 67, 53, 0.6), 0 6px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Pulsing animated ring on WhatsApp */
+.contact-bubble-pulse {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid #25D366;
+  opacity: 0.8;
+  animation: contactPulse 2.2s infinite ease-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes contactPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.9;
+  }
+  60% {
+    transform: scale(1.35);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.4);
+    opacity: 0;
+  }
+}
+
+/* Hover tooltip pill */
+.contact-bubble-tooltip {
+  position: absolute;
+  right: 68px;
+  white-space: nowrap;
+  background: rgba(15, 15, 15, 0.95);
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  padding: 7px 14px;
+  border-radius: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+  pointer-events: none;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.whatsapp-bubble .contact-bubble-tooltip {
+  border: 1px solid rgba(37, 211, 102, 0.5);
+}
+
+.gmail-bubble .contact-bubble-tooltip {
+  border: 1px solid rgba(234, 67, 53, 0.5);
+}
+
+.contact-bubble:hover .contact-bubble-tooltip {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+@media (max-width: 600px) {
+  .floating-bubbles-stack {
+    bottom: 20px;
+    right: 20px;
+    gap: 10px;
+  }
+
+  .contact-bubble {
+    width: 48px;
+    height: 48px;
+  }
+
+  .whatsapp-bubble .contact-bubble-icon {
+    font-size: 1.6rem;
+  }
+
+  .gmail-bubble .contact-bubble-icon {
+    font-size: 1.35rem;
+  }
+
+  .contact-bubble-tooltip {
+    display: none;
+  }
+}
