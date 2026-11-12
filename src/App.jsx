@@ -17,7 +17,6 @@ import Footer from './components/Footer/Footer'
 import BackToTop from './components/BackToTop/BackToTop'
 import WhatsAppBubble from './components/WhatsAppBubble/WhatsAppBubble'
 import Particles from './components/Particles/Particles'
-import CustomizeButton from './components/CustomizeButton/CustomizeButton'
 import { PortfolioProvider, usePortfolio } from './context/PortfolioContext'
 
 function AppContent() {
@@ -75,7 +74,6 @@ function AppContent() {
       <Footer />
       <WhatsAppBubble />
       <BackToTop />
-      <CustomizeButton />
     </motion.div>
   )
 }
