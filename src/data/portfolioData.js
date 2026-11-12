@@ -13,7 +13,7 @@ export const profile = {
   roles: ['Stage Host', 'Master of Ceremonies', 'Event Anchor'],
   tagline: 'Turning every stage into an unforgettable experience.',
   bio: 'With over 8 years of commanding stages across engagements, weddings, corporate events and public programs, I blend humor, professionalism and quick wit to make every event an experience your audience will never forget.',
-image: '/assets/picmain.JPG', // Your professional photo
+image: './assets/picmain.JPG', // Your professional photo
   email: 'rathorprakash813@gmail.com',
   phone: '9142462306',
   whatsapp: '9142462306',
@@ -47,7 +47,7 @@ image: '/assets/picmain.JPG', // Your professional photo
     facebook: 'https://www.instagram.com/anchor_delhi?utm_source=qr',
     whatsapp: 'https://wa.me/919142462306?text=Hello%20Anchor%20Delhi%2C%20I%20would%20like%20to%20inquire%20about%20booking%20you%20for%20an%20event.',
   },
-  downloadProfile: '/assets/profile.pdf', // Add your profile PDF
+  downloadProfile: './assets/profile.pdf', // Add your profile PDF
 };
 
 // Statistics counters
@@ -85,9 +85,9 @@ export const whyHireMe = [
 
 // Photo gallery (your real photos)
 export const gallery = [
-  { src: '/assets/picmain.JPG', alt: 'Hosting a grand event', category: 'Event' },
-  { src: '/assets/Collegepic.jpeg', alt: 'College fest on stage', category: 'Fest' },
-  { src: '/assets/clientsmile.JPG', alt: 'Happy client moment', category: 'Event' },
+  { src: './assets/picmain.JPG', alt: 'Hosting a grand event', category: 'Event' },
+  { src: './assets/Collegepic.jpeg', alt: 'College fest on stage', category: 'Fest' },
+  { src: './assets/clientsmile.JPG', alt: 'Happy client moment', category: 'Event' },
 ];
 
 // Video gallery (embedded YouTube highlight videos)
@@ -98,7 +98,7 @@ export const videos = [
     embedUrl: 'https://www.youtube.com/embed/BY1K6B0kB5Q',
     url: 'https://www.youtube.com/embed/BY1K6B0kB5Q',
     videoTitle: 'Shayri anchoring',
-    thumbnail: '/assets/picmain.JPG',
+    thumbnail: './assets/picmain.JPG',
   },
   {
     title: 'Anniversary Shayri',
@@ -106,7 +106,7 @@ export const videos = [
     embedUrl: 'https://www.youtube.com/embed/BRGQ4fo76qI',
     url: 'https://www.youtube.com/embed/BRGQ4fo76qI',
     videoTitle: 'anniversary shayri delhi',
-    thumbnail: '/assets/clientsmile.JPG',
+    thumbnail: './assets/clientsmile.JPG',
   },
   {
     title: 'Happy Engagement',
@@ -114,7 +114,7 @@ export const videos = [
     embedUrl: 'https://www.youtube.com/embed/dz1G17PkuiM',
     url: 'https://www.youtube.com/embed/dz1G17PkuiM',
     videoTitle: 'Happy Engagement anchoring',
-    thumbnail: '/assets/New Year.jpg',
+    thumbnail: './assets/New Year.jpg',
   },
 ];
 
@@ -123,7 +123,7 @@ export const showreel = {
   title: 'Anchor Delhi Showreel',
   description: 'A cinematic glimpse into the energy, humor and emotion I bring to every stage. Watch me transform moments into memories.',
   url: 'https://www.youtube.com/embed/BY1K6B0kB5Q',
-  thumbnail: '/assets/picmain.JPG',
+  thumbnail: './assets/picmain.JPG',
 };
 
 // Experience timeline
@@ -137,10 +137,10 @@ export const experience = [
 
 // Testimonials
 export const testimonials = [
-  { name: 'Rohan Mehta', designation: 'Event Director, Starlight', image: '/assets/client-placeholder.svg', review: 'Alex carried our entire awards night effortlessly. The crowd was hooked from start to finish. Truly a master of ceremonies.', rating: 5 },
-  { name: 'Priya Sharma', designation: 'Wedding Planner, The Grand Palace', image: '/assets/client-placeholder.svg', review: 'The most professional and charismatic anchor we have worked with. Our royal wedding felt like a cinematic experience.', rating: 5 },
-  { name: 'Vikram Singh', designation: 'Marketing Head, Nova Motors', image: '/assets/client-placeholder.svg', review: 'Engaging, punctual and incredibly polished. Alex elevated our product launch to a whole new level of excitement.', rating: 5 },
-  { name: 'Ananya Iyer', designation: 'Festival Coordinator', image: '/assets/client-placeholder.svg', review: 'High energy, quick wit and flawless bilingual hosting. Our 10,000-student fest was unforgettable thanks to Alex.', rating: 5 },
+  { name: 'Rohan Mehta', designation: 'Event Director, Starlight', image: './assets/client-placeholder.svg', review: 'Alex carried our entire awards night effortlessly. The crowd was hooked from start to finish. Truly a master of ceremonies.', rating: 5 },
+  { name: 'Priya Sharma', designation: 'Wedding Planner, The Grand Palace', image: './assets/client-placeholder.svg', review: 'The most professional and charismatic anchor we have worked with. Our royal wedding felt like a cinematic experience.', rating: 5 },
+  { name: 'Vikram Singh', designation: 'Marketing Head, Nova Motors', image: './assets/client-placeholder.svg', review: 'Engaging, punctual and incredibly polished. Alex elevated our product launch to a whole new level of excitement.', rating: 5 },
+  { name: 'Ananya Iyer', designation: 'Festival Coordinator', image: './assets/client-placeholder.svg', review: 'High energy, quick wit and flawless bilingual hosting. Our 10,000-student fest was unforgettable thanks to Alex.', rating: 5 },
 ];
 
 // Navigation links
