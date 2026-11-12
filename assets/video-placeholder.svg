@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a1a"/>
+      <stop offset="50%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#141414"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#f0d98c"/>
+      <stop offset="50%" stop-color="#d4af37"/>
+      <stop offset="100%" stop-color="#a8892e"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="400" cy="225" r="55" fill="none" stroke="url(#gold)" stroke-width="2" opacity="0.7"/>
+  <polygon points="390,205 415,225 390,245" fill="url(#gold)"/>
+  <text x="400" y="330" font-family="Georgia, serif" font-size="24" fill="url(#gold)" text-anchor="middle">VIDEO</text>
+  <text x="400" y="360" font-family="Arial" font-size="13" fill="#ffffff" text-anchor="middle" opacity="0.5">Replace with your highlight video</text>
+</svg>
